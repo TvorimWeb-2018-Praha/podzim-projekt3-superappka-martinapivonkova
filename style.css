@@ -31,3 +31,106 @@ body {
 }
 
 /* ----- zde začni psát vlastní CSS ----- */
+
+.hlavicka {
+    display: flex;
+    color: #25133d;
+}
+
+.logo {
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 15px;
+    margin-right: 35px;
+}
+
+.vlastnosti {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 15px;
+}   
+.vlastnosti li {
+    flex: 1 1 auto;
+    margin-right: 60px;
+}
+
+.banner {
+    background: navy url(images/pozadi.jpg);
+    color: white;
+    padding: 30px;
+    position: relative;
+}
+
+.banner h1 {
+    font-size: 70px;
+    font-weight: normal;
+    margin: 10px 0;
+}
+
+.banner p {
+    font-size: 28px;
+    font-family: 'Roboto', sans-serif;
+    width: 40%;
+    padding: 40px 0;
+}
+
+.banner .tlacitka {
+    display: flex;
+    padding: 0;
+    margin: 30px 0;
+}
+
+.banner .tlacitka li {
+    flex: 0 1 18%;
+    list-style: none;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 12px;
+    margin-right: 20px; 
+}
+
+.banner .tlacitka a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 0;
+}
+
+.banner .tlacitka li:hover {
+    background-color: #48418e;
+}
+
+.banner .telefon {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.obsah {
+    display: flex;
+    padding: 30px;
+}
+
+.obsah .sloupec {
+    text-align: center;
+}
+
+.obsah h2 {
+    color: #48418e;
+    margin: 0;
+}
+
+.obsah p {
+    color: #25133d;
+    padding: 15px;
+    margin: 0;
+}
+
+.paticka {
+    background-color: #48418e;
+    color: whitesmoke;
+    font-size: 14px;
+    text-align: center;
+    padding: 10px;
+}
