@@ -24,7 +24,7 @@ body {
 }
 
 .obal {
-    width: 960px; /* obsah stránky je omezený do pruhu širokého 960px */
+    width: 100%;
     margin: 0 auto; /* pruh je na stránce vycentrovaný */
     background: white;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
@@ -33,62 +33,56 @@ body {
 /* ----- zde začni psát vlastní CSS ----- */
 
 .hlavicka {
-    display: flex;
     color: #25133d;
 }
 
-.logo {
+.hlavicka .logo {
     text-transform: uppercase;
     font-weight: bold;
-    padding: 15px;
-    margin-right: 35px;
+    padding: 10px 50px 0 15px;
 }
 
-.vlastnosti {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 15px;
-}   
-.vlastnosti li {
-    flex: 1 1 auto;
-    margin-right: 60px;
+.hlavicka .vlastnosti {
+    margin: 10px 0;
 }
 
 .banner {
     background: navy url(images/pozadi.jpg);
     color: white;
     padding: 30px;
+    height: 680px;
     position: relative;
 }
 
 .banner h1 {
-    font-size: 70px;
+    font-size: 14vw;
     font-weight: normal;
-    margin: 10px 0;
+    margin: 0;
+    text-align: center;
 }
 
 .banner p {
-    font-size: 28px;
     font-family: 'Roboto', sans-serif;
-    width: 40%;
-    padding: 40px 0;
+    font-size: 22px;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+    width: 78%;
 }
 
 .banner .tlacitka {
-    display: flex;
     padding: 0;
-    margin: 30px 0;
+    margin: 30px auto;
+    width: 200px;
 }
 
 .banner .tlacitka li {
-    flex: 0 1 18%;
     list-style: none;
     text-align: center;
     border: 1px solid white;
     border-radius: 8px;
     padding: 12px;
-    margin-right: 20px; 
+    margin: 20px;
 }
 
 .banner .tlacitka a {
@@ -102,13 +96,14 @@ body {
 }
 
 .banner .telefon {
+    width: 304px;
+    height: 300px;
     position: absolute;
     right: 0;
     bottom: 0;
 }
 
 .obsah {
-    display: flex;
     padding: 30px;
 }
 
@@ -133,4 +128,157 @@ body {
     font-size: 14px;
     text-align: center;
     padding: 10px;
+}
+
+@media screen and (min-width: 460px) {
+    .hlavicka .logo {
+        padding: 15px 50px 0 30px;
+    }
+
+    .hlavicka .vlastnosti {
+        display: flex;
+        list-style: none;
+        padding-left: 30px;
+    }
+
+    .hlavicka .vlastnosti li {
+        padding-right: 30px;
+    }
+    .banner {
+        height: 700px;
+    }
+
+    .banner h1 {
+        font-size: 70px;
+    }
+
+    .banner p {
+        font-size: 28px;
+    }
+
+    .banner .tlacitka {
+        display: flex;
+        padding: 0;
+        justify-content: center;
+    }
+
+    .banner .tlacitka li {
+        flex: 1 0 90%;
+        margin: 10px;
+    }
+
+    .banner .telefon {
+        width: 350px;
+        height: 350px;
+    }
+
+    .obsah p {
+        margin: 0 auto;
+        text-align: center;
+        max-width: 70%;
+    }
+}
+
+@media screen and (min-width: 560px) {
+    .banner {
+        height: 600px;
+    }
+
+    .banner h1 {
+        font-size: 70px;
+    }
+
+    .banner .tlacitka {
+        padding: 0;
+        margin: 30px;
+        height: auto;
+        flex-direction: column;
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+    }
+}
+@media screen and (min-width: 670px) {
+    .hlavicka {
+        display: flex;
+    }
+
+    .hlavicka .vlastnosti {
+        margin: 0;
+        padding: 15px;
+    }   
+
+    .hlavicka .vlastnosti li {
+        padding-right: 40px;
+    }
+
+    .banner {
+        height: auto;
+    }
+
+    .banner h1 {
+        margin: 0 30px;
+    }
+
+    .banner p {
+        text-align: left;
+        margin: 0;
+        padding: 40px 0;
+        width: 40%;
+    }
+
+    .banner .tlacitka {
+        position: static;
+        padding: 0;
+        margin: 30px 0;
+        justify-content: left;
+        flex-direction: column;
+    }
+
+    .banner .tlacitka li {
+        margin-left: 0; 
+    }
+
+    .banner .telefon {
+        width: auto;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 820px) {
+    .obal {
+        max-width: 960px;
+    }
+
+    .hlavicka .vlastnosti li {
+        padding-right: 60px;
+    }
+
+    .banner h1 {
+        margin: 0;
+        text-align: left;
+    }
+
+    .banner p {
+        width: 37%;
+        padding: 40px 0;
+    }
+
+    .banner .tlacitka {
+        padding: 0;
+        margin: 30px 0;
+        flex-direction: row;
+    }
+
+    .banner .tlacitka li {
+        margin-right: 20px; 
+    }
+
+    .obsah {
+        display: flex;
+    }
+
+    .obsah p {
+        max-width: 100%;
+    }
 }
